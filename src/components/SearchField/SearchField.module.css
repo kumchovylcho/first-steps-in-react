@@ -1,0 +1,20 @@
+.search_btn {
+    background-color: chocolate;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.search_container {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+
+.search_box {
+    border: 2px solid lightgreen;
+    padding: 0.5em 1em;
+    background-color: azure;
+}

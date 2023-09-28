@@ -1,0 +1,10 @@
+.header-container {
+    padding: 1em;
+    background-color: #93dcc3;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 1.2em;
+    font-family: Robotto, sans-serif;
+}
