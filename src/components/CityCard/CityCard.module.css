@@ -1,0 +1,15 @@
+.city-card {
+    width: 30%;
+    text-align: center;
+}
+
+.city-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    background-color: brown;
+    color: white;
+    font-weight: 600;
+    border-radius: 1em;
+}

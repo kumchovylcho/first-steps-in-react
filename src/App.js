@@ -10,8 +10,12 @@ function App() {
         <>
             <Navigation />
             <SearchField setResults={setResults} />
-            {results.length === 0 ? <p>No Cities</p> : <p>Cities</p>}
-            <CityCard results={results} />
+            {results.length === 0 
+                ? <p className="cities_exist">No Cities</p> 
+                : <p className="cities_exist">Cities</p>}
+            <article className="cities_container container_padding">
+                <CityCard results={results} />
+            </article>
         </>
     );
 }

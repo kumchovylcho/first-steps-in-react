@@ -1,0 +1,17 @@
+.cities_container {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.container_padding {
+    padding: 2em 0 4em 0;
+}
+
+.cities_exist {
+    text-align: center;
+    font-size: 2em;
+}

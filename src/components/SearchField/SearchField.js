@@ -7,9 +7,9 @@ const SearchField = ({setResults}) => {
     const [inputValue, setInputValue] = useState("");
 
     return (
-        <div className={styles["search_container"]}>
+        <div className={`${styles.search_container} container_padding`}>
             <input
-                className={styles["search_box"]}
+                className={styles.search_box}
                 type="text"
                 placeholder="Enter city..."
                 value={inputValue}
@@ -17,7 +17,7 @@ const SearchField = ({setResults}) => {
             />
 
             <button
-                className={styles["search_btn"]}
+                className={styles.search_btn}
                 onClick={(e) => {searchCity(e, inputValue, setResults, setInputValue)}}>
                 Search
             </button>
@@ -44,6 +44,8 @@ const searchCity = async (e, inputValue, setResults, setInputValue) => {
                 ...currResults, {
                     name: cityData.name,
                     temp: cityData.main.temp,
+                    feelsLike: cityData.main.feels_like,
+                    windSpeed: cityData.wind.speed,
                     id: crypto.randomUUID(),
                 }
             ]
