@@ -1,6 +1,8 @@
 import styles from './CityCard.module.css';
 
-const CityCard = ({results}) => {
+const CityCard = ({results, filterCities}) => {
+    results = results.filter((x) => x.name.toLowerCase().includes(filterCities.toLowerCase()));
+
     return (
         results.map(city => {
             return (

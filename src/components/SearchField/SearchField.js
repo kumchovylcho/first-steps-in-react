@@ -1,26 +1,28 @@
-import { useState } from 'react';
 import getCityWeather from '../../services/getCityWeather';
 import styles from './SearchField.module.css';
 
 
-const SearchField = ({setResults}) => {
-    const [inputValue, setInputValue] = useState("");
+const SearchField = ({setResults, inputValue, setInputValue, placeholder, hasBtn}) => {
 
     return (
         <div className={`${styles.search_container} container_padding`}>
             <input
                 className={styles.search_box}
                 type="text"
-                placeholder="Enter city..."
+                placeholder={placeholder}
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
             />
 
-            <button
-                className={styles.search_btn}
-                onClick={(e) => {searchCity(e, inputValue, setResults, setInputValue)}}>
-                Search
-            </button>
+            {hasBtn 
+                ?   <button
+                        className={styles.search_btn}
+                        onClick={(e) => {searchCity(e, inputValue, setResults, setInputValue)}}>
+                        Search
+                    </button>
+                :   ""
+              }
+            
 
         </div>
     );
